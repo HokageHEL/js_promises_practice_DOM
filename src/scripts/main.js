@@ -66,7 +66,7 @@ const thirdPromise = new Promise((resolve) => {
   document.addEventListener('contextmenu', function handleClick(e) {
     e.preventDefault();
     countRightClick = true;
-    document.removeEventListener('click', handleClick);
+    document.removeEventListener('contextmenu', handleClick);
 
     if (countLeftClick && countRightClick) {
       resolve('Third promise was resolved');
